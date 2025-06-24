@@ -1,0 +1,8 @@
+POST http://localhost:5000/sleeps
+Content-Type: application/json
+
+{
+  "date": "2025-01-13",
+  "hours": 7,
+  "quality": "Good"
+}

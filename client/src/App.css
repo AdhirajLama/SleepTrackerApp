@@ -1,0 +1,40 @@
+.app-logo-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.app-logo-large {
+  height: 360px;
+}
+
+.welcome-text {
+  margin-top: 20px;
+}
+
+.app-bar {
+  background-color: #001f3f; /* Dark blue color */
+}
+
+.app-title {
+  flex-grow: 1;
+  font-size: 1.5em;
+}
+
+.content {
+  padding: 20px;
+}
+
+.app-footer {
+  padding: 10px;
+  background-color: #001f3f; /* Dark blue color */
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logout-message {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #555;
+}

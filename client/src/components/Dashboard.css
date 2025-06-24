@@ -1,0 +1,58 @@
+/* src/components/Dashboard.css */
+
+.dashboard-container {
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+.sleep-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.sleep-table th,
+.sleep-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.sleep-table th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.edit-form input,
+.edit-form select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.edit-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-form button:hover {
+  background-color: #0056b3;
+}
