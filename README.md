@@ -20,8 +20,8 @@ A simple web app to help you track your sleep patterns, built with React, Node.j
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/sleeptracker.git
-   cd sleeptracker
+   git clone https://github.com/AdhirajLama/SleepTrackerApp.git
+   cd SleepTracker
    ```
 
 2. **Install dependencies:**
