@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../../constants/api';
 import './SignUp.css'; 
 
 function SignUp() {
@@ -12,7 +13,7 @@ function SignUp() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/signup', { email, password });
+      const response = await axios.post(`${API_BASE_URL}/api/signup`, { email, password });
       console.log('User signed up:', response.data);
       
       // localStorage.setItem('token', response.data.token);

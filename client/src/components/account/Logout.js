@@ -11,7 +11,7 @@ function Logout() {
     navigate('/login');
   }, [navigate]);
 
-  return <div>Logging out...</div>;
+  return <div className="logout-message">Logging out...</div>;
 }
 
 export default Logout;

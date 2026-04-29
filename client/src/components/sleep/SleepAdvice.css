@@ -1,0 +1,45 @@
+.sleep-advice-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.sleep-advice-section {
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.sleep-advice-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.sleep-advice-metrics {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sleep-advice-list {
+  padding-left: 1.25rem;
+}
+
+.sleep-advice-list li {
+  margin-bottom: 1rem;
+}
+
+.sleep-advice-list p {
+  margin: 0.35rem 0 0;
+  color: #444;
+}
+
+.sleep-advice-error {
+  background: #ffebee;
+  color: #c62828;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}

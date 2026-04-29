@@ -1,5 +1,7 @@
 import React, { createContext, Component } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../constants/api';
+import { getAuthHeaders } from '../utils/authHeaders';
 
 export const SleepContext = createContext();
 
@@ -17,7 +19,11 @@ export class SleepProvider extends Component {
 
   fetchSleeps = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/sleeps/sleepdata');
+      const token = localStorage.getItem('token');
+      if (!token) return;
+      const response = await axios.get(`${API_BASE_URL}/api/sleeps/sleepdata`, {
+        headers: getAuthHeaders(),
+      });
       this.setState({ sleeps: response.data });
     } catch (error) {
       console.error('Error fetching sleep data:', error);

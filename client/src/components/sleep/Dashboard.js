@@ -2,6 +2,8 @@
 import React, { Component } from 'react'; // Import React and Component class from React
 import axios from 'axios'; // Import axios for making HTTP requests
 import { Button } from '@mui/material'; // Import Button component from Material-UI
+import { API_BASE_URL } from '../../constants/api';
+import { getAuthHeaders } from '../../utils/authHeaders';
 import SleepChart from './SleepChart'; // Import SleepChart component
 import './Dashboard.css'; // Import CSS for Dashboard component
 
@@ -32,8 +34,8 @@ class Dashboard extends Component {
         throw new Error('No token found'); // Throw an error if no token is found
       }
       // Make a GET request to fetch sleep data
-      const response = await axios.get('http://localhost:5000/api/sleeps/sleepdata', {
-        headers: { Authorization: `Bearer ${token}` }, // Set the Authorization header with the token
+      const response = await axios.get(`${API_BASE_URL}/api/sleeps/sleepdata`, {
+        headers: getAuthHeaders(), // Set the Authorization header with the token
       });
       this.setState({ sleeps: response.data }); // Update state with fetched sleep data
     } catch (error) {
@@ -45,10 +47,9 @@ class Dashboard extends Component {
   // Method to handle deletion of a sleep record
   handleDelete = async (id) => {
     try {
-      const token = localStorage.getItem('token'); // Get the token from local storage
       // Make a DELETE request to delete the sleep record
-      await axios.delete(`http://localhost:5000/api/sleeps/${id}`, {
-        headers: { Authorization: `Bearer ${token}` }, // Set the Authorization header with the token
+      await axios.delete(`${API_BASE_URL}/api/sleeps/${id}`, {
+        headers: getAuthHeaders(), // Set the Authorization header with the token
       });
       // Update state by filtering out the deleted sleep record
       this.setState((prevState) => ({
@@ -74,10 +75,9 @@ class Dashboard extends Component {
     event.preventDefault(); // Prevent default form submission behavior
     const { editingId, formData } = this.state; // Destructure state variables
     try {
-      const token = localStorage.getItem('token'); // Get the token from local storage
       // Make a PUT request to update the sleep record
-      await axios.put(`http://localhost:5000/api/sleeps/${editingId}`, formData, {
-        headers: { Authorization: `Bearer ${token}` }, // Set the Authorization header with the token
+      await axios.put(`${API_BASE_URL}/api/sleeps/${editingId}`, formData, {
+        headers: getAuthHeaders(), // Set the Authorization header with the token
       });
       // Update state with the updated sleep data and reset editing state
       this.setState((prevState) => ({

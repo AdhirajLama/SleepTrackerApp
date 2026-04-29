@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../../constants/api';
 import './LogIn.css';
 
 function LogIn() {
@@ -20,7 +21,7 @@ function LogIn() {
     
     try {
       // Make a POST request to the login API endpoint with email and password
-      const response = await axios.post('http://localhost:5000/api/login', { email, password });
+      const response = await axios.post(`${API_BASE_URL}/api/login`, { email, password });
       console.log('Login response:', response.data); // Debugging log
       
       // Store the received token in local storage

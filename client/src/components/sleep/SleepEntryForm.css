@@ -1,0 +1,40 @@
+/* src/components/sleep/SleepEntryForm.css */
+
+.sleep-entry-container {
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+.sleep-entry-card {
+  width: 100%;
+  max-width: 720px;
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(136, 132, 216, 0.12), rgba(255, 255, 255, 1) 55%);
+}
+
+.sleep-entry-callout {
+  border: 1px solid rgba(136, 132, 216, 0.35);
+  background: rgba(136, 132, 216, 0.08);
+  border-radius: 12px;
+  padding: 14px 14px 10px;
+}
+
+.sleep-entry-bullets {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #2f2f2f;
+}
+
+.sleep-entry-bullets li {
+  margin: 6px 0;
+}
+
+.sleep-entry-error {
+  margin-top: 8px;
+}
+
+.sleep-entry-form {
+  width: 100%;
+}
